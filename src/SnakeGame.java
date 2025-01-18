@@ -51,9 +51,9 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
         snakeHead = new Tile(5, 5); // default starting position
         snakeBody = new ArrayList<Tile>();
 
-        food = new Tile(10, 10);
+        food = new Tile(10, 10); // default starting position for food
         random = new Random();
-        placeFood(); // define method
+        placeFood(); // define method later below
 
         velocityX = 0;
         velocityY = 0;
@@ -69,7 +69,7 @@ public class SnakeGame extends JPanel implements ActionListener, KeyListener {
         }
 
         gameLoop = new Timer(100, this); //every 1/10 milisec
-        gameLoop.start();
+        gameLoop.start(); //starts the timer
     }
 
     public void paintComponent(Graphics g) {
